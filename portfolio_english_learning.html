@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Strata by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<!-- Header -->
+<header id="header">
+    <div class="inner">
+        <!-- Chatbot Introduction -->
+        <section>
+            <a href="#" class="image avatar"><img src="images/user.png" alt="Chatbot Avatar" /></a>
+            <h1><strong>I am a chatbot</strong></h1>
+            <p>Built based on ChainLit (ChatGPT-like UIs).<br />
+               Connects with ChatGpt (LLM) with Elevenlabs (Text-To-Speech).<br />
+               Currently, it is in the MVP phase, making baby steps each time.</p>
+        </section>
+
+        <!-- Staff Introduction -->
+        <section>
+            <h1>Let's introduce our staff team</h1>
+            <div class="staff-member">
+                <a href="#" class="image avatar"><img src="images/female_teacher.png" alt="Female Teacher" /></a>
+                <p>Bella</p>
+            </div>
+            <div class="staff-member">
+                <a href="#" class="image avatar"><img src="images/male_teacher.png" alt="Male Teacher" /></a>
+                <p>Josh</p>
+            </div>
+        </section>
+    </div>
+</header>
+
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+				<!-- English Learning ChatBot Intro. -->
+				<header class="major">
+					<h2>Introduction to the English Learning ChatBot</h2>
+				</header>
+				
+				<section>
+					<p>Designed predominantly for non-native speakers, our platform is currently tailored for the Chinese demographic.</p>
+					
+					<h3>Key Features:</h3>
+					<ul>
+						<li>Interactive ChatBot Interface</li>
+						<li>Comprehensive Evaluation of English Vocabulary, Idioms, and Grammar by pre-defined test</li>
+						<li>Real-time Voice and Gender Customization for the AI Tutor (With TTS playback capability)</li>
+						<li>"Read Out Loud" Feature for Pronunciation Assessment – Emphasizing the importance of vocal practice</li>
+						<li>Enhanced with logic thinking and real-life topics, our Scenario Generation covers 10+ main areas, each with 10+ related sub-topics. This design fosters an immersive learning experience, enabling users to master English in practical, real-world contexts.</li>
+						<li>Creativity!More coming!</li>
+					</ul>
+				</section>
+					</section>
+
+				<!-- Two -->
+					<section id="two">
+						<h2>Deep Dive</h2>
+						<div class="row">
+							<style>
+								    .compact-article {
+										width: 80%; /* Increase this percentage if you have more space available */
+										font-size: 0.9em; /* Adjust the font size */
+										line-height: 1.2em; /* Adjust the line height */
+									}
+									h3, h4 {
+											display: block;
+											clear: both;
+									}
+							</style>
+							<div style="display: block; clear: both; margin-bottom: 20px;">
+								<h3>What's the fundamental problems I want to solve?</h3>
+								<p>Empower your self-taught journey by seizing fragmented moments to delve into whatever you wish to learn, regardless of place or time!</p>
+								<h4>WorkFlow Explainations</h4>
+								<img src="images/chainlitflow.png" alt="ChainLit Flow" />
+							</div>
+							
+							<!-- ChainLit -->
+							<article>
+								<h4><a href="https://docs.chainlit.io/overview" target="_blank">ChainLit</a></h4>
+								<p>Chainlit is an open-source Python package that makes it incredibly fast to build and share LLM apps. Integrate the Chainlit API in your existing code to spawn a ChatGPT-like interface in minutes!Think of it like Streamlit, but specifically for assistants/chatbots!</p>
+								<p>Simple demonstation on how to send external services to ChainLit UI Interface</p>
+
+							</article>
+							<h5>Sample Python Code: Connect ElevenLabs API to utilize TTS Service</h5>
+							</div>
+							<style>
+								.code-container {
+									background-color: black;
+									padding: 10px;
+									border-radius: 5px;
+									color: white; /* To make the text visible against the black background */
+									white-space: pre-line; /* To ensure the code inside preserves its formatting */
+								}
+								.keyword {
+									color: #C678DD;
+								}
+								.function {
+									color: #61AEEE;
+								}
+								.string {
+									color: #98C379;
+								}
+								.comment {
+									color: #7C7C7C;
+								}
+								.var {
+									color: #E06C75;
+								}
+							</style>
+						</head>
+						<body>
+							<div class="code-container">
+								<span class="keyword">from</span> elevenlabs <span class="keyword">import</span> set_api_key<span class="var">, </span>generate<span class="var">, </span>save
+
+									audio <span class="var">= </span><span class="function">generate</span>(
+										text<span class="var">=</span><span class="string">response_content</span><span class="var">, </span>
+										voice<span class="var">=</span>voice<span class="var">, </span>
+										model<span class="var">=</span><span class="string">"eleven_monolingual_v1"</span>
+									)
+									<span class="function">save</span>(audio, filename<span class="var">=</span>filepath)
+						
+									elements <span class="var">= </span>[<span class="var">cl.Audio</span>(name<span class="var">=</span><span class="string">"audio_sample.mp3"</span>, path<span class="var">=</span><span class="string">"./audio_sample.mp3"</span>, display<span class="var">=</span><span class="string">"inline"</span>)]
+									<span class="keyword">await</span> <span class="var">cl.Message</span>(content<span class="var">=</span><span class="string">"Here is the audio version:"</span>, elements<span class="var">=</span>elements).<span class="function">send</span>()
+							</div>
+						</body>
+						
+						<p></p>
+						<h5>Demo</h5>
+						<video width="320" height="240" controls>
+							<source src="demo/voice_demo.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						
+						
+							
+							
+							<!-- ChatGPT -->
+							<article>
+								<p></p>
+								<h4><a href="https://openai.com/blog/chatgpt" target="_blank">ChatGPT</a> (Names already out there)</h4>
+								<p>ChatGPT: get instant answers, find creative inspiration, and learn something new.</p>
+								<p>ChatGPT was trained on large collections of text data, such as books, articles, and web pages. English learning will be a piece of cake </p>
+								<h4>WorkFlow Explainations</h4>
+								<img src="images/chatgptflow.png" alt="ChainLit Flow" />
+								<p></p>
+								<h5>Sample Prompt Engineering for given scenario</h5>
+							</article>
+							<!DOCTYPE html>
+							<style>
+								.code-container {
+									background-color: black;
+									padding: 10px;
+									border-radius: 5px;
+									color: white; /* To make the text visible against the black background */
+									white-space: pre-line; /* To ensure the code inside preserves its formatting */
+								}
+								.keyword {
+									color: #C678DD;
+								}
+								.function {
+									color: #61AEEE;
+								}
+								.string {
+									color: #98C379;
+								}
+								.comment {
+									color: #84c4b7;
+								}
+								.var {
+									color: #E06C75;
+								}
+							</style>
+						<body>
+							<div class="code-container">
+								<span class="var">"date_night":</span>
+								<span class="comment">("Please generate a role for our conversation. Your options include a nervous first-dater looking for,</span>
+								<span class="comment">"conversation starters, a long-term partner planning a surprise date night, or someone discussing,</span>
+								<span class="comment">"their interests and hobbies over dinner. Depending on the role you select, our conversation will dive</span>
+								<span class="comment">"into getting to know each other, discussing shared interests, or planning the perfect evening </span>
+								<span class="comment">"together. Engage in the role and see where the conversation leads, but ensure to limit it within 200 tokens.")</span>
+							</div>
+						</body>
+						</html>
+						<p></p>
+						<p>Note:For simplicity, I've turned off Text-To-Speech, user audio input, and machine translation for non-English entries(Feature in progress).</p>
+						<h5>Demo-Date prepartion</h5>
+						<video width="320" height="240" controls>
+							<source src="demo/role_play.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<p></p>
+						<h5>Demo-Date Simulation</h5>
+						<video width="320" height="240" controls>
+							<source src="demo/role_play.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<article>Still tons of rooms need improvement </article>
+						<p></p>
+							<article>
+								<h4><a href="https://elevenlabs.io/" target="_blank">Elevenlabs</a></h4>
+								<p>Generate lifelike spoken audio with AI tools.</p>
+								
+							</article>
+						</section>
+						<section id="three">    
+							<style>
+								.actions {
+									display: flex;
+									justify-content: center;
+									gap: 1rem;
+								}
+					
+								.button {
+									padding: 0.5rem 1rem;
+									border: none;
+									border-radius: 5px;
+									text-decoration: none;
+									font-weight: bold;
+									transition: background-color 0.3s ease;
+								}
+					
+								.primary {
+									background-color: #007BFF;
+									color: white;
+								}
+					
+								.primary:hover {
+									background-color: #0056b3;
+								}
+					
+								.special {
+									background-color: #6c757d;
+									color: white;
+								}
+					
+								.special:hover {
+									background-color: #494f54;
+								}
+							</style>
+							<article>
+								<h4>Deployment <img src="images/gcp-logo.png" alt="GCP Logo" style="vertical-align: middle; width: 120px;"></h4>
+								<p>Currently serving on <a href="https://cloud.google.com/" target="_blank">Google Cloud Platform</a></p>
+
+
+								<ul class="actions">
+									<li><a href="deployment.html" class="button primary">Learn More</a></li>
+									<li><a href="index.html" class="button primary">Main Page</a></li>
+								</ul>
+
+								<ul>
+									<li>
+										Tencent Cloud <img src="images/tencent-cloud.png" alt="Tencent Cloud Logo" style="vertical-align: middle; width: 120px;">
+									</li>
+									<li>
+										Alibaba Cloud Service <img src="images/Alibaba-cloud.png" alt="Alibaba Cloud Logo" style="vertical-align: middle; width: 120px;">
+									</li>
+									<li>
+										Microsoft Cloud Service <img src="images/Microsoft-Cloud.png" alt="Microsoft Cloud Logo" style="vertical-align: middle; width: 120px;">
+									</li>
+								</ul>
+								<p>Considering these services is essential if my primary target audience is Chinese users.</p>
+							</article>
+						</section>
+						
+						
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
